@@ -41,16 +41,6 @@ namespace Knapsack.Tests
              O(N*W) ** Requires int array of size [N,M] to store previous results
         */
 
-        //private bool IncludeVolume { get; set; } = false;
-
-        //private string FormatKey(int index, int weight, int volume)
-        //{
-        //    if(!IncludeVolume)
-        //        return "K" + index + "_W" + weight;
-        //    else
-        //        return "K" + index + "_W" + weight + "_V"+volume;
-        //}
-
         private void DetermineOptimalSolution(KSItem[] items)
         {
             int n = items.Length;
@@ -91,7 +81,7 @@ namespace Knapsack.Tests
                 }
             }
 
-            int maxValue = valueArray[n, maxWeight, maxVolume];
+            //int maxValue = valueArray[n, maxWeight, maxVolume];
             //Next we need to "Trace Back" to get the actual solution
             //Start at the max K[n,W]
             int remWeight = maxWeight;
@@ -126,78 +116,3 @@ namespace Knapsack.Tests
         }
     }
 }
-
-
-
-
-/*
- * 
- * 
- *         private void DetermineOptimalSolution(KSItem[] items)
-        {
-            int n = items.Length;
-            IncludeVolume = (TM.MaxVolume != null);
-
-            //Hard Constraints
-            int maxWeight = TM.MaxWeight;
-            int maxVolume = TM.MaxVolume.GetValueOrDefault(0);
-
-            int curWeight, curVolume;
-            //Dictionary allows a "virtual" multi dimensional int array at runtime
-            //HOWEVER it incurs
-            //Dictionary<string, int> K = new Dictionary<string, int>();
-            int[,,] valueArray = new int[n, maxWeight, maxVolume];
-
-            for (int i = 0; i <= n; i++)
-            {
-                for (curWeight = 0; curWeight <= maxWeight; curWeight++)
-                {
-                    for (curVolume = 0; curVolume <= maxVolume; curVolume++)
-                    {
-
-                        //Base case
-                        if (i == 0 || curWeight == 0 || (IncludeVolume && curVolume == 0))
-                            //K[FormatKey(i, curWeight, curVolume)] = 0;
-                            valueArray[i, curWeight, curVolume] = 0;
-
-                        //If the item Can be added
-                        else if (items[i - 1].Weight <= curWeight && (!IncludeVolume || (IncludeVolume && (items[i - 1].Volume <= curVolume))))
-                        {
-                            int nextItem = items[i - 1].Value;
-                            //int prevState = K[FormatKey(i - 1, curWeight - items[i - 1].Weight, curVolume - items[i - 1].Volume)];
-
-                            //Value of adding the next item VS Value of NOT adding the item
-                            K[FormatKey(i, curWeight, curVolume)] = Math.Max((nextItem + prevState), K[FormatKey(i - 1, curWeight, curVolume)]);
-                        }
-                        //If the next item cannot be added set it to the previous state
-                        else
-                            K[FormatKey(i, curWeight, curVolume)] = K[FormatKey(i - 1, curWeight, curVolume)];
-                    }
-                }
-            }
-
-            int maxValue = K[FormatKey(n, maxWeight, maxVolume)];
-            //Next we need to "Trace Back" to get the actual solution
-            //Start at the max K[n,W]
-            int remWeight = maxWeight;
-            int remVolume = maxVolume;
-
-            for (int i = n; i > 0; i--)
-            {
-                //IF moving from i[index-1] -> i[index-2] is the same than
-                // i[index-1] is NOT part of the solution
-                // however if they are different than it is. 
-                if (K[FormatKey(i, remWeight, remVolume)] != K[FormatKey((i - 1), remWeight, remVolume)])
-                {
-                    KSItem choosenItem = items[i - 1];
-                    OptimalSolution.TryAddItem(choosenItem);
-                    remWeight -= choosenItem.Weight;
-                    remVolume -= choosenItem.Volume;
-                }
-            }
-
-            //If we are including Volume than use it else use 1
-            SolutionCount = n * maxWeight * (IncludeVolume ? maxVolume : 1);
-        }
-
-*/
