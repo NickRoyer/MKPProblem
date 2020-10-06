@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item Id="1" Value="1" Weight="2" Volume="5"></Item>
+  <Item Id="2" Value="2" Weight="1" Volume="6"></Item>
+  <Item Id="3" Value="4" Weight="3" Volume="2"></Item>
+  <Item Id="4" Value="3" Weight="7" Volume="3"></Item>
+  <Item Id="5" Value="6" Weight="5" Volume="1"></Item>
+</Items>
