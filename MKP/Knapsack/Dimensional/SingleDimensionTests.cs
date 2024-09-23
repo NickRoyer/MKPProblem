@@ -51,6 +51,7 @@ namespace MKP_Test.Knapsack
         [InlineData(TestType.BruteForceCombinations)]
         [InlineData(TestType.BruteForcePermutations)]
         [InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         [Trait("Category", "Zero Weight")]
         public void OneD_Zero_10Items(TestType type)
         {
@@ -72,6 +73,7 @@ namespace MKP_Test.Knapsack
         [InlineData(TestType.BruteForceCombinations)]
         [InlineData(TestType.BruteForcePermutations)]
         [InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         [Trait("Category", "Mid Weight")]
         public void OneD_Mid_10_Items(TestType type)
         {
@@ -92,6 +94,7 @@ namespace MKP_Test.Knapsack
         [InlineData(TestType.BruteForceCombinations)]
         [InlineData(TestType.BruteForcePermutations)]
         [InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         [Trait("Category", "Large Weight")]
         public void OneD_Large_10_Items(TestType type)
         {
@@ -113,6 +116,7 @@ namespace MKP_Test.Knapsack
         [InlineData(TestType.BruteForceCombinations)]
         //[InlineData(TestType.BruteForcePermutations)] //Takes too long
         [InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         [Trait("Category", "Mid Weight")]
         [Trait("Category", "11 Items")]
         public void OneD_Mid_11_Items(TestType type)
@@ -135,6 +139,7 @@ namespace MKP_Test.Knapsack
         [InlineData(TestType.BruteForceCombinations)]
         //[InlineData(TestType.BruteForcePermutations)] //Takes too long
         [InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         [Trait("Category", "20 Items")]
         public void OneD_Large_20_Items(TestType type)
         {
@@ -156,6 +161,7 @@ namespace MKP_Test.Knapsack
         //[InlineData(TestType.BruteForceCombinations)] //Takes too long
         //[InlineData(TestType.BruteForcePermutations)] //Takes too long
         [InlineData(TestType.DynamicProgramming)]
+        //[InlineData(TestType.GeneticAlgorithm)] //Fails to get optimal
         [Trait("Category", "Mid Weight")]
         [Trait("Category", "25 Items")]
         public void OneD_Mid_25_Items(TestType type)

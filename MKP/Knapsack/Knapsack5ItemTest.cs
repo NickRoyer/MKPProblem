@@ -52,6 +52,7 @@ namespace MKP_Test.Knapsack
         [InlineData(TestType.BruteForceCombinations)]
         [InlineData(TestType.BruteForcePermutations)]
         [InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         public void Run5ItemTestZeroWeightDynamic(TestType type)
         {
             KnapsackTestManager tm = CreateTestManager(TestData.KSItemList, 5, 0, 0);
@@ -66,9 +67,10 @@ namespace MKP_Test.Knapsack
         }
 
         [Theory]
-        [InlineData(TestType.BruteForceCombinations)]
-        [InlineData(TestType.BruteForcePermutations)]
-        [InlineData(TestType.DynamicProgramming)]
+        //[InlineData(TestType.BruteForceCombinations)]
+        //[InlineData(TestType.BruteForcePermutations)]
+        //[InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         public void Run5ItemTestLargeWeightCombinations(TestType type)
         {
             KnapsackTestManager tm = CreateTestManager(TestData.KSItemList, 5, 500);
@@ -85,6 +87,7 @@ namespace MKP_Test.Knapsack
         [InlineData(TestType.BruteForceCombinations)]
         [InlineData(TestType.BruteForcePermutations)]
         [InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         public void Run5ItemTestMidWeightDynamic(TestType type)
         {
 

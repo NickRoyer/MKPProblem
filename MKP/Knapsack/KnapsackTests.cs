@@ -8,7 +8,7 @@ namespace MKP_Test
 {
     public class KnapsackTests
     {
-        public enum TestType { BruteForcePermutations, BruteForceCombinations, DynamicProgramming};
+        public enum TestType { BruteForcePermutations, BruteForceCombinations, DynamicProgramming, GeneticAlgorithm };
         public MKPTest CreateTest(TestType type)
         {
             switch (type)
@@ -19,6 +19,8 @@ namespace MKP_Test
                     return new BruteForceAllCombinations();
                 case TestType.DynamicProgramming:
                     return new DynamicProgramming();
+                case TestType.GeneticAlgorithm:
+                    return new GeneticAlgorithmTest();
             }
 
             throw new Exception("Invalid Test Type");

@@ -70,6 +70,7 @@ namespace MKP_Test.Knapsack
         [InlineData(TestType.BruteForceCombinations)]
         [InlineData(TestType.BruteForcePermutations)]
         [InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         [Trait("Category", "Zero Weight")]
         public void TwoD_Zero_10Items(TestType type)
         {
@@ -91,6 +92,7 @@ namespace MKP_Test.Knapsack
         [InlineData(TestType.BruteForceCombinations)]
         [InlineData(TestType.BruteForcePermutations)]
         [InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         [Trait("Category", "Mid Weight")]
         public void TwoD_Mid_05_Items(TestType type)
         {
@@ -112,6 +114,7 @@ namespace MKP_Test.Knapsack
         [InlineData(TestType.BruteForceCombinations)]
         [InlineData(TestType.BruteForcePermutations)]
         [InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         [Trait("Category", "Mid Weight")]
         public void TwoD_Mid_10_Items(TestType type)
         {
@@ -133,6 +136,7 @@ namespace MKP_Test.Knapsack
         [InlineData(TestType.BruteForceCombinations)]
         [InlineData(TestType.BruteForcePermutations)]
         [InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         [Trait("Category", "Large Weight")]
         public void TwoD_Large_10_Items(TestType type)
         {
@@ -154,6 +158,7 @@ namespace MKP_Test.Knapsack
         [InlineData(TestType.BruteForceCombinations)]
         //[InlineData(TestType.BruteForcePermutations)] //Takes too long
         [InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         [Trait("Category", "Mid Weight")]
         [Trait("Category", "11 Items")]
         public void TwoD_Mid_11_Items(TestType type)
@@ -176,6 +181,7 @@ namespace MKP_Test.Knapsack
         [InlineData(TestType.BruteForceCombinations)]
         ////[InlineData(TestType.BruteForcePermutations)] //Takes too long
         [InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         [Trait("Category", "20 Items")]
         public void TwoD_Large_20_Items(TestType type)
         {
@@ -197,6 +203,7 @@ namespace MKP_Test.Knapsack
         //[InlineData(TestType.BruteForceCombinations)] //Takes too long (1 min)
         //[InlineData(TestType.BruteForcePermutations)] //Takes WAY too long
         [InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         [Trait("Category", "Mid Weight")]
         [Trait("Category", "25 Items")]
         public void TwoD_Mid_25_Items(TestType type)
@@ -219,6 +226,7 @@ namespace MKP_Test.Knapsack
         //[InlineData(TestType.BruteForceCombinations)] //Takes too long (1 min)
         //[InlineData(TestType.BruteForcePermutations)] //Takes WAY too long
         [InlineData(TestType.DynamicProgramming)]
+        //[InlineData(TestType.GeneticAlgorithm)] // Fails to find optimal solution
         [Trait("Category", "Mid Weight")]
         [Trait("Category", "30 Items")]
         public void TwoD_Mid_30_Items(TestType type)
@@ -240,6 +248,7 @@ namespace MKP_Test.Knapsack
         [Theory]
         //[InlineData(TestType.BruteForceCombinations)] //Takes too long (1 min)
         [InlineData(TestType.DynamicProgramming)]
+        [InlineData(TestType.GeneticAlgorithm)]
         [Trait("Category", "Mid Weight")]
         [Trait("Category", "25 Items")]
         public void TwoD_Mid_2_25_Items(TestType type)
